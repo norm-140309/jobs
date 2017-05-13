@@ -18,7 +18,13 @@ class App extends React.Component {
       main: {
         screen: TabNavigator({
           map: { screen: MapScreen },
-          deck: { screen: DeckScreen }
+          deck: { screen: DeckScreen },
+          review: {
+            screen: StackNavigator({
+              review: { screen: ReviewScreen },
+              settings: { screen: SettingsScreen}
+            })
+          }
         })
       }
     });
